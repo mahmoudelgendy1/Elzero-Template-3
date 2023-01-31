@@ -51,3 +51,58 @@ ul {
   }
 }
 /* End Global Rules */
+/* Start Header */
+header {
+  background-color: white;
+  box-shadow: 0 20px 20px 0 #E5E5E5;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+header .logo {
+  padding: 17.5px 0;
+  font-size: 1.7em;
+  color: var(--main-color);
+  font-weight: 700;
+}
+@media (max-width: 767px) {
+  header .logo {
+    margin: 0 auto;
+  }
+}
+header .nav {
+  display: flex;
+}
+header .nav > li > a {
+  background-color: white;
+  display: flex;
+  color: black;
+  padding: 15px 25px;
+  height: 100%;
+  height: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--main-transition);
+  position: relative;
+}
+header .nav > li > a::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  background-color: var(--main-color);
+  height: 4px;
+  left: 0;
+  top: 0;
+  transition: var(--main-transition);
+}
+header .nav > li > a:hover {
+  background-color: var(--section-background);
+  color: var(--main-color);
+}
+header .nav > li > a:hover::before {
+  width: 100%;
+}
+/* End Header */
