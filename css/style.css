@@ -119,6 +119,7 @@ header .nav > li:last-child:hover > .mega-m {
   transform: translateY(1px);
   opacity: 1;
   width: 100%;
+  pointer-events: unset;
 }
 header .nav .mega-m {
   position: absolute;
@@ -194,6 +195,7 @@ header .nav .mega-m ul li:not(:last-child) a::before {
   }
   header .mega-m .image img {
     width: 100%;
+    display: block;
   }
   header .nav .mega-m {
     display: flex;
