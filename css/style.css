@@ -191,11 +191,10 @@ header .nav .mega-m ul li:not(:last-child) a::before {
 }
 @media (min-width: 992px) {
   header .mega-m .image {
-    width: 50%;
+    width: 40%;
   }
   header .mega-m .image img {
     width: 100%;
-    display: unset;
   }
   header .nav .mega-m {
     left: 0%;
