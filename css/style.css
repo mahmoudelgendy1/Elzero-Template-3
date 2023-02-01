@@ -380,6 +380,7 @@ header .nav .mega-m ul li:not(:last-child) a::before {
   border-radius: 10px;
   overflow: hidden;
   transition: var(--main-transition);
+  padding-bottom: 10px;
 }
 #articles .box:hover {
   transform: translateY(-10px);
