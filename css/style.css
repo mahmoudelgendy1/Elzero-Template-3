@@ -221,7 +221,7 @@ header .nav .mega-m ul li:not(:last-child) a::before {
 }
 @media (max-width: 600px) {
   .landing .image {
-    display: none;
+    
   }
   .landing .content {
     text-align: center;
