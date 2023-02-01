@@ -118,26 +118,47 @@ header .nav > li > a:hover::before {
 header .nav > li:last-child:hover > .mega-m {
   transform: translateY(1px);
   opacity: 1;
-  width: 100%;
   pointer-events: unset;
 }
 header .nav .mega-m {
   position: absolute;
+  width: 100%;
   display: flex;
   top: 100%;
+  padding: 10px;
+  gap: 15px;
   left: 0;
   background-color: white;
   border-bottom: 3px solid var(--main-color);
   transform: translateY(100px);
   transition: opacity var(--main-transition), transform var(--main-transition);
-  opacity: 1;
+  opacity: 0;
   pointer-events: none;
+}
+header .nav .mega-m .image {
+  width: 50%;
+}
+@media (max-width: 768px) {
+  header .nav .mega-m {
+    flex-direction: column;
+    gap: 0
+  }
+}
+@media (max-width: 991px) {
+  header .nav .mega-m .image {
+    display: none;
+  }
+}
+header .nav .mega-m ul {
+  flex: 1;
 }
 header .nav .mega-m ul li a {
   display: block;
   color: var(--main-color);
   font-weight: 700;
   position: relative;
+  padding: 10px 0 10px 50px;
+  font-size: 1.2em;
 }
 header .nav .mega-m ul li a i {
   width: 50px;
@@ -155,53 +176,5 @@ header .nav .mega-m ul li:not(:last-child) a::before {
   background-color: var(--section-background);
   bottom: 0;
   left: 0;
-}
-@media (max-width: 767px) {
-  header .mega-m .image {
-    display: none;
-  }
-  header .nav .mega-m {
-    flex-direction: column;
-    width: 100%;
-  }
-  header .nav .mega-m ul li a {
-    padding: 15px 0 15px 50px;
-    font-size: 1.3em;
-  }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  header .mega-m .image {
-    display: none;
-  }
-  header .nav .mega-m {
-    display: flex;
-    padding: 15px;
-    width: 100%;
-    justify-content: space-between;
-  }
-  header .nav .mega-m ul li a {
-    padding: 10px 70px 10px 40px;
-    font-size: 1em;
-    font-size: 1.1em;
-  }
-  header .nav .mega-m ul {
-    margin-right: auto;
-  }
-}
-@media (min-width: 992px) {
-  header .mega-m .image {
-    width: 45%;
-  }
-  header .mega-m .image img {
-    width: 100%;
-  }
-  header .nav .mega-m {
-    padding: 15px;
-    justify-content: space-between;
-  }
-  header .nav .mega-m ul li a {
-    padding: 10px 0 10px 40px;
-    font-size: 1em;
-  }
 }
 /* End Header */
