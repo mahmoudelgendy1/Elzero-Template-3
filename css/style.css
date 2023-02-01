@@ -134,6 +134,7 @@ header .nav .mega-m {
   transition: opacity var(--main-transition), transform var(--main-transition);
   opacity: 0;
   pointer-events: none;
+  z-index: 10;
 }
 header .nav .mega-m .image {
   width: 50%;
@@ -178,3 +179,102 @@ header .nav .mega-m ul li:not(:last-child) a::before {
   left: 0;
 }
 /* End Header */
+/* Start Landing Area */
+.landing {
+  position: relative;
+}
+.landing::before {
+  content: "";
+  position: absolute;
+  left: 0; 
+  top: -40px;
+  height: 100%;
+  width: 100%;
+  background-color: var(--section-background);
+  z-index: -1;
+  transform: skewY(-5deg);
+  transform-origin: top left;
+}
+.landing .container {
+  min-height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+  padding-bottom: 120px;
+}
+.landing .content {
+  flex: 100%;
+}
+.landing .content h1 {
+  font-size: 40px;
+  letter-spacing: -2px;
+}
+.landing .content p {
+  font-size: 23px;
+  line-height: 1.7;
+  margin: 5px 0 0;
+  color: #666;
+  max-width: 500px;
+}
+.landing .image img {
+  width: 600px;
+  animation: up-down 6s ease-in-out infinite;
+}
+@media (max-width: 979px) {
+  .landing .image {
+    display: none;
+  }
+  .landing .content {
+    text-align: center;
+  }
+  .landing .content p {
+    width: 100%;
+    margin: 10px auto;
+  }
+  .landing .content h1 {
+    font-size: 24px;
+    letter-spacing: 0px;
+  }
+  .landing .content p {
+    font-size: 18px;
+  }
+}
+.landing .go-down {
+  position: absolute;
+  color: var(--main-color);
+  left: 50%;
+  bottom: 30px;
+  transition: var(--main-transition);
+  animation: bouncing 2s linear infinite;
+  font-size: 25px;
+  transform: translateX(-50%);
+}
+.landing .go-down:hover {
+  color: var(main-color-alt);
+}
+@keyframes up-down {
+  0%,
+  100% {
+    transform: translateY(20px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+@keyframes bouncing {
+  0% {
+    transform: translate(-50%, 0);
+  }
+  20% {
+    transform: translate(-50%, -20px);
+  }
+  30% {
+    transform: translate(-50%, 0);
+  }
+  40% {
+    transform: translate(-50%, -20px);
+  }
+  50% {
+    transform: translate(-50%, 0);
+  }
+}
+/* End Landing Area */
