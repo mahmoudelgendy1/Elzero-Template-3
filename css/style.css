@@ -222,7 +222,7 @@ header .nav .mega-m ul li:not(:last-child) a::before {
   max-width: 500px;
 }
 .landing .image {
-  flex: 1;
+  width: 50%;
 }
 .landing .image img {
   animation: up-down 6s ease-in-out infinite;
