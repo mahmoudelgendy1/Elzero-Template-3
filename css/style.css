@@ -395,7 +395,6 @@ header .nav .mega-m ul li:not(:last-child) a::before {
 #articles .box .image {
   overflow: hidden;
   position: relative;
-  height: 55%;
 }
 #articles .box .image::before {
   font-family: "Font Awesome 5 Free"; font-weight: 400;
