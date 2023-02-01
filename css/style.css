@@ -130,7 +130,7 @@ header .nav .mega-m {
   border-bottom: 3px solid var(--main-color);
   transform: translateY(100px);
   transition: opacity var(--main-transition), transform var(--main-transition);
-  opacity: 0;
+  opacity: 1;
   pointer-events: none;
 }
 header .nav .mega-m ul li a {
@@ -188,7 +188,7 @@ header .nav .mega-m ul li:not(:last-child) a::before {
     margin-right: auto;
   }
 }
-@media (min-width: 992px) and (min-width: 1200px) {
+@media (min-width: 992px) {
   header .mega-m .image {
     width: 45%;
   }
