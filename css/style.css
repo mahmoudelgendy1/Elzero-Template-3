@@ -219,7 +219,7 @@ header .nav .mega-m ul li:not(:last-child) a::before {
   width: 600px;
   animation: up-down 6s ease-in-out infinite;
 }
-@media (max-width: 979px) {
+@media (max-width: 991px) {
   .landing .image {
     display: none;
   }
