@@ -188,7 +188,7 @@ header .nav .mega-m ul li:not(:last-child) a::before {
     margin-right: auto;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 992px) and (min-width: 1200px) {
   header .mega-m .image {
     width: 45%;
   }
