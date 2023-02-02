@@ -465,3 +465,177 @@ header .nav .mega-m ul li:not(:last-child) a::before {
   }
 }
 /* End Article Section */
+/* Start Gallery Section */
+#gallery {
+  padding: var(--main-padding-top) 0;
+  position: relative;
+  background-color: var(--section-background);
+}
+#gallery .container {
+  display: grid;
+  grid-gap: 40px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+}
+#gallery .container .box {
+  padding: 15px;
+  background-color: white;
+  box-shadow: 0 12px 20px 0px rgb(0 0 0 / 13%), 0px 2px 4px 0px rgb(0 0 0 / 12%);
+}
+#gallery .container .box .image {
+  position: relative;
+  overflow: hidden;
+  
+}
+#gallery .container .box .image::before {
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #4848482E;
+  width: 0;
+  height: 0;
+  z-index: 1;
+  opacity: 0;
+}
+#gallery .container .box .image:hover::before {
+  -webkit-animation: flash 0.5s;
+  -o-animation: flash 0.5s;
+  animation: flash 0.5s;
+}
+#gallery .container .box .image img {
+  transition: var(--main-transition);
+}
+#gallery .container .box .image:hover img {
+  transform: rotate(3deg) scale(1.1);
+}
+@keyframes flash {
+  0%, 40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 150%;
+    height: 150%;
+  }
+}
+/* End Gallery Section */
+/* Start Features */
+#features {
+  padding: var(--main-padding-top) 0;
+  position: relative;
+  background-color: white;
+}
+#features .container {
+  display: grid;
+  grid-gap: 40px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+}
+#features .container .box {
+  text-align: center;
+  border: 2px solid #ccc;
+}
+#features .container .box .image {
+  position: relative;
+  overflow: hidden;
+}
+#features .container .box .image::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+}
+#features .container .box .image::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  right: 0;
+  border-style: solid;
+  border-width: 0 0 150px 500px;
+  border-color: transparent transparent white transparent;
+  transition: var(--main-transition);
+}
+#features .container .box:hover .image::after {
+  border-width: 0 500px 170px 0;
+}
+#features .container .box h3 {
+  position: relative;
+  font-size: 40px;
+  margin: 25px auto;
+  width: fit-content;
+}
+#features .container .box h3::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -20px;
+  height: 5px;
+  transform: translateX(-50%);
+  width: 70%;
+}
+#features .container .box p {
+  line-height: 2;
+  font-size: 20px;
+  margin: 30px 0;
+  padding: 25px;
+  font-weight: 300;
+}
+#features .box a {
+  display: block;
+  border: 3px solid;
+  border-radius: 10px;
+  width: fit-content;
+  margin: 0 auto 30px;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px 30px;
+  transition: var(--main-transition);
+}
+#features .quality .image::before {
+  background-color: #f44036;
+}
+#features .quality h3::after {
+  background-color: #f44036;
+}
+#features .quality a {
+  color: #f44036;
+  border-color: #f44036;
+  background: linear-gradient(to right, #f44036 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom -20px;
+}
+#features .time .image::before {
+  background-color: #009688;
+}
+#features .time h3::after {
+  background-color: #009688;
+}
+#features .time a {
+  color: #009688;
+  border-color: #009688;
+  background: linear-gradient(to right, #009688 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom -20px;
+}
+#features .passion .image::before {
+  background-color: #03a9f4;
+}
+#features .passion h3::after {
+  background-color: #03a9f4;
+}
+#features .passion a {
+  color: #03a9f4;
+  border-color: #03a9f4;
+  background: linear-gradient(to right, #03a9f4 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom -20px;
+}
+#features .box:hover a {
+  background-position: left bottom -20px;
+  color: white;
+}
+/* End Features */
