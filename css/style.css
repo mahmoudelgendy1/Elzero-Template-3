@@ -891,3 +891,63 @@ header .nav .mega-m ul li:not(:last-child) a::before {
   z-index: 10;
 }
 /* End Services */
+/* Start Skills */
+#our-skills {
+  padding: var(--main-padding-top) 0;
+  position: relative;
+  background-color: white;
+}
+#our-skills .container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+#our-skills .container .skills {
+  width: 100%;
+}
+#our-skills .container .content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+#our-skills .container .content h3 {
+  font-size: 20px;
+}
+#our-skills .container .content span {
+  color: var(--main-color);
+  font-size: 15px;
+  padding: 3px;
+  border-radius: 2px;
+  margin-bottom: 2px;
+  border: 2px solid var(--section-background);
+}
+#our-skills .container .skills .level-holder {
+  height: 25px;
+  width: 100%;
+  background-color: var(--section-background);
+  margin: 2px 0 20px;
+  border-radius: 50px;
+  overflow: hidden;
+}
+#our-skills .container .skills .level-holder .level {
+  height: 100%;
+  background: linear-gradient( to right, #3CAAF5 0%, #0098FF 50%);
+  border-radius: 30px;
+  position: relative;
+}
+@media (max-width: 991px) {
+  #our-skills .container {
+    flex-direction: column;
+  }
+}
+/* End Skills */
+/* Start Work Steps */
+#how-it-works {
+  padding: var(--main-padding-top) 0;
+  position: relative;
+  background-color: white;
+}
+#how-it-works .container {
+  
+}
+/* End Work Steps */
